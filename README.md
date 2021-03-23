@@ -7,6 +7,7 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Technologies-Used](#technologies-used)
+  * [Deployed-Link](#deployed-link)
   * [Usage](#usage)
   * [Walkthrough](#walkthrough)
   * [Questions](#questions)
@@ -14,6 +15,10 @@
   * [License](#license)
 
   ## Description
+
+  The motivation for this project was the desire to use MongoDB with a Mongoose Schema in order to create an application that stores information that is provided by a user. That information can then be retrieved and updated by the user.
+
+  The purpose of this application is to view, create, and track daily workouts. You can log multiple exercises in a workout in a given day. You can also continue your most recent workout or start an entirely new workout for the current day. This application helps the user reach their fitness goals more speedily.
 
   ## Installation
 
@@ -25,6 +30,10 @@
   * [mongoose](https://www.mongoose.com/)
   * [Express.js](https://expressjs.com/)
   * [Chart.js](https://www.chartjs.org/)
+
+  ## Deployed-Link
+
+  [Fitness Tracker](https://calm-woodland-33472.herokuapp.com/?id=6059942f6726a50015715107)
 
   ## Usage
   
