@@ -48,7 +48,7 @@ const WorkoutSchema = new Schema({
     //     toJSON: {
     //         virtuals: true,
     //     },
-    }
+    // }
 );
 
 WorkoutSchema.methods.currentDate = function () {
