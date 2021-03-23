@@ -4,18 +4,6 @@ const db = require("../models");
 
 //get last workout
 router.get("/api/workouts", (req, res) => {
-    // res.send("works")
-    // db.Workout.find({})
-
-    //     .then(data => {
-
-    //         console.log(data)
-    //         res.json(data);
-    //     })
-    //     .catch(err => {
-    //         res.json(err);
-    //     });
-
     db.Workout.aggregate([
         {
             $addFields: {
@@ -38,13 +26,7 @@ router.get("/api/workouts", (req, res) => {
 
 //add exercise
 router.put("/api/workouts/:id", (req, res) => {
-    // console.log(req.params.id)
-    // console.log(req.body)
-    // res.send("works")
-    console.log("id")
-    console.log(req.params.id)
-    console.log("body")
-    console.log(req.body)
+
     db.Workout.findOneAndUpdate({ _id: req.params.id }, { $push: { exercises: req.body } }, { new: true })
         .then(data => {
             res.json(data);
@@ -88,15 +70,6 @@ router.get('/api/workouts/range', (req, res) => {
         .catch((err) => {
             res.json(err);
         });
-
-    // db.Workout.find({})
-    //     .then(data => {
-    //         console.log(data)
-    //         res.json(data);
-    //     })
-    //     .catch(err => {
-    //         res.json(err);
-    //     });
 });
 
 module.exports = router;
