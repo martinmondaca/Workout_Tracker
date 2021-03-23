@@ -1,6 +1,6 @@
 // Requiring necessary npm packages
 const express = require("express");
-// const logger = require("morgan");
+const logger = require("morgan");
 const mongoose = require("mongoose");
 
 // Setting up port 
@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 // Creating express app and configuring middleware needed for authentication
 const app = express();
 
-// app.use(logger("dev"))
+app.use(logger("dev"))
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
